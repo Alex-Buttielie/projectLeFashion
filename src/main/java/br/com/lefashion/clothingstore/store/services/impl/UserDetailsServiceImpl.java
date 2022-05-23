@@ -15,22 +15,6 @@ import java.util.Optional;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-
-    @Autowired
-    private UserRepository usuarioRepository;
-
-    /*
-    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        //Usuario usu = usuarioRepository.findByUsuEmail(login);
-        UsuarioDTO usu = new UsuarioDTO(1, "admin.login", "admin@gmail.com", "admin", "admin", null );
-        if (usu == null){
-            throw new UsernameNotFoundException(login);
-        }
-        //return new UserSS(usu.getUsuIden(), usu.getUsuEmail(), usu.getUsuSenha(), usu.getGruposUsuario());
-
-        return new UserSS(usu.getId(), usu.getEmail(), usu.getSenha(), null);
-    }*/
-
 	@Autowired
 	private UserRepository repo;
 	
