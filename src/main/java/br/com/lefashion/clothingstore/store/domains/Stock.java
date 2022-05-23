@@ -34,9 +34,9 @@ public class Stock {
     private Date stockEndDate;
     @Basic
     @Column(name = "quantity_partys_stock")
-    private Number quantityPartysStock;
+    private Integer quantityPartysStock;
     @Basic
     @Column(name = "reference_month")
-    private Number referenceMonth;
+    private Integer referenceMonth;
 
 }

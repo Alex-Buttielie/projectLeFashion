@@ -31,7 +31,7 @@ public class Product {
     private Long idProduct;
     @Basic
     @Column(name = "identification_product_code")
-    private Number identificationProductCode;
+    private Integer identificationProductCode;
     @Basic
     @Column(name = "product_name")
     private String ProductName;
@@ -40,10 +40,10 @@ public class Product {
     private Date  cadastreDate;
     @Basic
     @Column(name = "model")
-    private Number model;
+    private Integer model;
     @Basic
     @Column(name = "size")
-    private Number size;
+    private Integer size;
     @Basic
     @Column(name = "is_accepts_discount")
     private Boolean isAcceptsDiscount;
@@ -52,7 +52,7 @@ public class Product {
     private Boolean isAcceptsExchange;
     @Basic
     @Column(name = "price_cost")
-    private Number priceCost;
+    private Integer priceCost;
     @OneToOne
     @JoinColumn(nullable = true, unique = false)
     @JsonFormat

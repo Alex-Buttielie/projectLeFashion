@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface EmailService {
 
-    //String sendEmail(SimpleMailMessage msg);
-
     String sendNewPasswordEmail(User User, String newPass);
 
 }

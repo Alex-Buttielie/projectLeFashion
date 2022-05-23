@@ -20,7 +20,7 @@ CREATE TABLE IF  NOT EXISTS TB_USER
     TELEPHONE2  	VARCHAR (15),
     CADASTRE_DATE   DATE,
     SEX 			INT,
-    USER_TYPE 		INT
+    USER_TYPER 		INT
 );
 
 CREATE TABLE IF  NOT EXISTS TB_STOCK
@@ -29,7 +29,7 @@ CREATE TABLE IF  NOT EXISTS TB_STOCK
     STOCK_START_DATE DATE,
     STOCK_END_DATE DATE,
     QUANTITY_PARTYS_STOCK INTEGER ,
-    REFERECE_MONTH INTEGER
+    REFERENCE_MONTH INTEGER
 );
 
 CREATE TABLE IF  NOT EXISTS TB_SALE
@@ -45,7 +45,7 @@ CREATE TABLE IF  NOT EXISTS TB_SALE
 CREATE TABLE IF  NOT EXISTS TB_BRAND
 (
     ID_BRAND INTEGER  PRIMARY KEY DEFAULT nextval('TB_BRAND_ID_SEQ'),
-    DESCRIPTIONS VARCHAR (300)
+    DESCRIPTION VARCHAR (300)
 );
 CREATE TABLE IF  NOT EXISTS TB_PRODUCT
 (
@@ -119,16 +119,16 @@ insert into TB_USER (ds_login,
                      telephone,
                      cadastre_date,
                      sex,
-                     user_type)
+                     user_typer)
 values ('Alex.Buttielie','Alex Buttielie','70846792192','Alex@99592706','6796000','buttielle3@gmail.com', '2001-03-16','62994291748',now(),1, 1);
 
-insert into tb_brand (descriptions)
+insert into tb_brand (description)
 values ('calvin klein');
 
 insert into tb_stock (stock_start_date,
                       stock_end_date,
                       quantity_partys_stock,
-                      referece_month)
+                      reference_month)
 values (now(),'2022-05-31', 20, 5);
 
 

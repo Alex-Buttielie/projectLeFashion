@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.relational.core.sql.In;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -55,12 +56,12 @@ public class User {
     private String telephone2;
     @Basic
     @Column(name = "cadastre_date")
-    private String cadastreDate;
+    private Date cadastreDate;
     @Basic
     @Column(name = "sex")
-    private Number sex;
+    private Integer sex;
     @Basic
     @Column(name = "user_typer")
-    private Number userTyper;
+    private Integer userTyper;
 
 }

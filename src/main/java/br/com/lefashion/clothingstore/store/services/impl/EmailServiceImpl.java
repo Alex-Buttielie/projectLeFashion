@@ -16,8 +16,6 @@ public class EmailServiceImpl implements EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    public String sendEmail(SimpleMailMessage msg){ return null;}
-
     @Override
     public String sendNewPasswordEmail(User user, String newPass) {
         return sendMail(user, newPass);
@@ -34,17 +32,12 @@ public class EmailServiceImpl implements EmailService {
         message.setSentDate(new Date(System.currentTimeMillis()));
 
         try {
-
-            enviarEmail(message);
+            mailSender.send(message);
             return "Email enviado com sucesso!";
         } catch (Exception e) {
             e.printStackTrace();
             return "Erro ao enviar email.";
         }
-    }
-
-    public void enviarEmail(SimpleMailMessage message) {
-        mailSender.send(message);
     }
 
 }

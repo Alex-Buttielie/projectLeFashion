@@ -9,27 +9,26 @@ import java.util.Collection;
 public class UserSS implements UserDetails {
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+    private Long idUser;
     private String email;
-    private String senha;
+    private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
     public UserSS() {
     }
 
-
-    public UserSS(Integer id, String email, String senha) {
+    public UserSS(Long idUser, String email, String password) {
 
         super();
-        this.id = id;
+        this.idUser = idUser;
         this.email = email;
-        this.senha = senha;
+        this.password = password;
         //this.authorities = perfis.stream().map(x -> new SimpleGrantedAuthority(x.getDescricao())).collect(Collectors.toList());
 
     }
 
-    public Integer getId() {
-        return id;
+    public Long getIdUser() {
+        return idUser;
     }
 
     @Override
@@ -39,7 +38,7 @@ public class UserSS implements UserDetails {
 
     @Override
     public String getPassword() {
-        return senha;
+        return password;
     }
 
     @Override

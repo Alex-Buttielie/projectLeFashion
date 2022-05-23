@@ -37,6 +37,6 @@ public class ItemsSold {
     @JoinColumn(name = "fk_id_product", columnDefinition = "id_product", nullable = false)
     private Product product;
     @ManyToOne
-    @JoinColumn(name = "items_sold", referencedColumnName = "id_sale", nullable = false)
+    @JoinColumn(name = "fk_id_sale", referencedColumnName = "id_sale", nullable = false)
     private Sale sale;
 }

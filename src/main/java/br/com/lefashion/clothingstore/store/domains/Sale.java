@@ -42,7 +42,7 @@ public class Sale {
     private Time saleTime;
     @Basic
     @Column(name = "value_sale")
-    private Number valueSale;
+    private Integer valueSale;
     @OneToOne
     @JoinColumn(name = "fk_id_user", referencedColumnName = "id_user",  nullable = false, unique = false)
     @JsonFormat

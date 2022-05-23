@@ -32,13 +32,13 @@ public class Payment {
     private Long idPayment;
     @Basic
     @Column(name = "type_payment")
-    private Number typePayment;
+    private Integer typePayment;
     @Basic
     @Column(name = "value_change")
-    private Number valueChange;
+    private Integer valueChange;
     @Basic
     @Column(name = "value_entry")
-    private Number valueEntry;
+    private Integer valueEntry;
     @OneToOne
     @JoinColumn(name = "fk_id_sale", referencedColumnName = "id_sale", nullable = true, unique = false)
     @JsonFormat
